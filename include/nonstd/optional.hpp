@@ -813,39 +813,39 @@ public:
         return has_value_;
     }
 
-    optional_constexpr14 value_type const & value() const optional_ref_qual
-    {
-        if ( ! has_value() )
-            throw bad_optional_access();
+    // optional_constexpr14 value_type const & value() const optional_ref_qual
+    // {
+    //     if ( ! has_value() )
+    //         throw bad_optional_access();
 
-        return contained.value();
-    }
+    //     return contained.value();
+    // }
 
-    optional_constexpr14 value_type & value() optional_ref_qual
-    {
-        if ( ! has_value() )
-            throw bad_optional_access();
+    // optional_constexpr14 value_type & value() optional_ref_qual
+    // {
+    //     if ( ! has_value() )
+    //         throw bad_optional_access();
 
-        return contained.value();
-    }
+    //     return contained.value();
+    // }
 
 #if optional_HAVE_REF_QUALIFIER
 
-    optional_constexpr14 value_type const && value() const optional_refref_qual
-    {
-        if ( ! has_value() )
-            throw bad_optional_access();
+    // optional_constexpr14 value_type const && value() const optional_refref_qual
+    // {
+    //     if ( ! has_value() )
+    //         throw bad_optional_access();
 
-        return std::move( contained.value() );
-    }
+    //     return std::move( contained.value() );
+    // }
 
-    optional_constexpr14 value_type && value() optional_refref_qual
-    {
-        if ( ! has_value() )
-            throw bad_optional_access();
+    // optional_constexpr14 value_type && value() optional_refref_qual
+    // {
+    //     if ( ! has_value() )
+    //         throw bad_optional_access();
 
-        return std::move( contained.value() );
-    }
+    //     return std::move( contained.value() );
+    // }
 
 #endif
 
